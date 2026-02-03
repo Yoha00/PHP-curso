@@ -4,11 +4,12 @@
 
 class Cadastro{
 
+    //Atributos
     private $nome;
     private $email;
     private $senha;
 
-
+    //Métodos Getters e Setters
     public function getNome():string{
     return $this->nome;
     }
@@ -29,8 +30,8 @@ class Cadastro{
     $this->senha = $senha;
     }
 
-    public function __tostring(){
-    return json_encode(array(
+    public function __tostring(){ //Método mágico que converte o objeto em string
+    return json_encode(array( //Converte o objeto em um array associativo
         'nome'=>$this->getNome(),
         'email'=>$this->getEmail(),
         'senha'=>$this->getSenha(),

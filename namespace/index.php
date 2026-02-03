@@ -6,8 +6,8 @@ use Cliente\Cadastro;
 
 $cad = new Cadastro();
 
-$cad->setNome("Yohao");
-$cad->setEmail("yohaoqueiroz@gmail.com");
+$cad->setNome("Yohann");
+$cad->setEmail("yohannqueiroz@gmail.com");
 $cad->setSenha("yohaahoy");
 
 $cad->registrarVenda();
