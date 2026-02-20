@@ -3,15 +3,16 @@
 session_start(); // Inicia a sessão para controlar o acesso às páginas e armazenar informações do usuário logado
 include 'config.php';
 
-if (!isset($_SESSION['adm_id'])) { // Verifica se o usuário está logado, caso contrário, redireciona para a página de login
+// --- Verificação --- //
+if (!isset($_SESSION['adm_id'])) { //Se a variavel não existir, ele redireciona para a pagina de login
     header("Location: login.php");
     exit;
 }
 
 // --- LÓGICA DE EXCLUSÃO --- //
-if (isset($_GET['excluir'])) { 
-    $id = $_GET['excluir']; // ID da máquina a ser excluída
-    $sql_del = "DELETE FROM maquinas WHERE maqid = ?"; // SQL para excluir a máquina do banco
+if (isset($_GET['excluir'])) { //Se a variavel excluir existir 
+    $id = $_GET['excluir']; // Ele pega o id da maquina que o usuario deseja excluir pela URL
+    $sql_del = "DELETE FROM maquinas WHERE maqid = ?"; // Exclue no banco de dados
     $stmt_del = $conn->prepare($sql_del); 
     $stmt_del->execute([$id]);
     
@@ -21,7 +22,7 @@ if (isset($_GET['excluir'])) {
 }
 
 // --- Lógica para adicionar maquinas --- //
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btn_adicionar'])) { // Se o usuario clicar no botão "Adicionar"
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btn_adicionar'])) { //Priva de aparecer na URL e verifica se a variavel btn existe
     $nome = $_POST['nome_maquina']; // Pega o nome da máquina digitado no formulário
     $preco = $_POST['preco_uso']; 
     $status = $_POST['status'];
@@ -35,8 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btn_adicionar'])) { //
 }
 
 $sql_select = "SELECT * FROM maquinas ORDER BY maqid ASC"; 
-$stmt = $conn->query($sql_select);
-$maquinas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $conn->query($sql_select); //Executa o comando direto do banco, de forma rapida e trazendo as informações que tiver
+$maquinas = $stmt->fetchAll(PDO::FETCH_ASSOC); // Ele pega os dados, coloca tudo na variavel maquinas, e depois organiza com fetch_assoc para colocar em lista
 ?>
 
 <!DOCTYPE html>

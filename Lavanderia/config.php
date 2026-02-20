@@ -7,7 +7,8 @@ $user = "postgres";
 $password = "acess";
 
 // Criando a conexão
-$conn = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
+$conn = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $password); //$conn = canal de comunicação
+//PDO = construct para acessar diversos bancos de dados
 
 
 ?>
