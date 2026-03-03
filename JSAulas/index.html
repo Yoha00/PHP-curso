@@ -13,11 +13,12 @@
     </style>
 </head>
 <body>
-    <h1>Olá, mundo!</h1>
-    <p>Testando aaaaaaa</p>
     <script> //Aparece primeiro que o texto, porque o script é lido antes do texto
-        alert("Poggers mundo") //Caixa de alerta
-        confirm("")
+        alert("Bem vindo") //Caixa de alerta
+        confirm("Você tem certeza que quer continuar?") //Caixa de confirmação, retorna true ou false
+        var aura = prompt("Qual seu nome?") //Caixa de prompt, retorna o valor digitado
     </script>
+    <h1>Olá, <script>document.write(aura)</script></h1> </h1>
+    <p>Testando aaaaaaa</p>
 </body>
 </html>

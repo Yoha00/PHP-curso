@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula06 OH YEAH</title>
+        <style>m 
+        body{
+            background-color: rgb(52, 50, 184);
+            color: white;
+            font: normal 20px Helvetica;
+        }
+        h1{
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <script>
+       /* var nome = window.prompt("Qual seu nome? ")
+        var idade = Number(window.prompt("Qual sua idade? "))
+        var nota = Number(window.prompt("Qual sua nota? "))
+        //document.write("O aluno " + nome + " com " + idade + " anos tirou a nota " + nota + " na matéria da faculdade.") //concatenação de string
+        document.write(`O aluno ${nome} com ${idade} anos tirou a nota ${nota} na matéria da faculdade.`) //template string, usando crase e ${} pra concatenar com menos código.*/
+
+        //var s = 'JavaScript'
+        //document.write(`A palavra ${s} tem ${s.length} caracteres.`) //propriedade length retorna o tamanho da string
+
+        var nome = window.prompt("Qual seu nome? ")
+        document.writeln(`seu nome tem ${nome.length} letras.<br>`) //propriedade length retorna o tamanho da string
+        document.writeln(`seu nome em maiúsculas é ${nome.toUpperCase()}<br>`) //toUpperCase() retorna a string em maiúsculas
+        document.writeln(`seu nome em minúsculas é ${nome.toLowerCase()}<br>`) //toLowerCase() retorna a string em minúsculas
+
+        var n1 = parseFloat(window.prompt("Digite um número "))
+        document.writeln(`Seu número é ${n1.toFixed(2)}<br>`) //toFixed() formata o número com um número específico de casas decimais
+        document.writeln(`Caso seu numero fosse formatado com vírgula: ${n1.toFixed(2).replace(".", ",")}<br>`) //replace() substitui um valor por outro, nesse caso substitui o ponto por vírgula
+        document.writeln(`Formatando o número como moeda brasileira: ${n1.toLocaleString(`pt-BR`, {style: "currency", currency: "BRL"})}<br>`) //toLocaleString() formata o número de acordo com a localidade, nesse caso pt-BR para português do Brasil e style: "currency" para formato de moeda, e currency: "BRL" para real brasileiro
+    </script>  
+</body>
+</html>
