@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <style>
+        body{
+            background-color: rgb(255, 255, 255);
+            color: rgb(14, 6, 6);
+            font: normal 20px Helvetica;
+        }
+    </style> 
+</head>
+<body>
+    <script>
+        a = Number(window.prompt("Digite o primeiro número desejado: "))
+        b = Number(window.prompt("Digite o segundo número desejado: "))
+        var soma = a + b
+        var sub = a - b
+        var mult = a * b
+        var div = a / b
+        var mod = a % b
+
+        document.write(`A soma dos números ${a} e ${b} é: ${soma}. <br>`)
+        document.write(`A subtração dos números ${a} e ${b} é: ${sub}. <br>`)
+        document.write(`A multiplicação dos números ${a} e ${b} é: ${mult}. <br>`)
+        document.write(`A divisão dos números ${a} e ${b} é: ${div .toFixed(2)}. <br>`)
+        document.write(`O módulo dos números ${a} e ${b} é: ${mod}. <br>`)
+
+    </script>  
+</body>
+</html>
