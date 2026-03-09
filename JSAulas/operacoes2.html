@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <style>
+        body{
+            background-color: rgb(255, 255, 255);
+            color: rgb(14, 6, 6);
+            font: normal 20px Helvetica;
+        }
+    </style> 
+</head>
+<body>
+    <script>
+        var media = Number(window.prompt("Qual a média do seu aluno? "))
+
+        var resultado = media >= 7 ? `Parabens, você foi aprovado!` : `Infelizmente, você foi reprovado!`
+        document.write(resultado)
+        document.write(`<br>` + `A sua média foi: ${media}`)
+    </script>  
+</body>
+</html>
